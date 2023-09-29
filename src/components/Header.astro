@@ -46,8 +46,12 @@ import { SITE_TITLE } from '../consts';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
+		background-image: linear-gradient(45deg,var(--retro-gradient));
+  		background-size: 170%;
+		background-repeat:no-repeat;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		z-index:10;
+		position:sticky;
 	}
 	h2 {
 		margin: 0;
@@ -65,7 +69,7 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: black;
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
