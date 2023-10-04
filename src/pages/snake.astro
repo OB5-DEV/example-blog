@@ -1,0 +1,43 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+         body {
+            overflow:;
+        }
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .game {
+            border: 1px solid black;
+            background-color: white;s
+        }
+    </style>
+</head>
+<body>
+    <Header title={SITE_TITLE} />
+		<div class="stars"></div>
+		<div class="stars2"></div>
+		<div class="stars3"></div>
+    <div class="game-container">
+        <canvas class="game" width="400" height="400"></canvas>
+    </div>
+
+<script src="../utils/useSnake.ts" type="Application/Javascript" lang="ts"/>
+
+    <Footer />
+</body>
+</html>
